@@ -1,9 +1,8 @@
-let pronoun = ["the", "our"];
-let adj = ["great", "big"];
-let noun = ["jogger", "racoon"];
+const pronoun = ["the", "our"];
+const adj = ["great", "big"];
+const noun = ["jogger", "racoon"];
 
 const domainLoop = (arrOfPronoun, arrOfAdj, arrOfNoun) => {
-  //let arrOfDomain = [];
   for (let i = 0; i < arrOfAdj.length; i++) {
     for (let j = 0; j < arrOfPronoun.length; j++) {
       for (let k = 0; k < arrOfNoun.length; k++) {
@@ -11,9 +10,11 @@ const domainLoop = (arrOfPronoun, arrOfAdj, arrOfNoun) => {
       }
     }
   }
+  return;
 };
 
-console.log("Hello World");
-//console.log(domainL
-//return arrOfDomain.push(arrOfPronoun[j] + arrOfAdj[i] + arrOfNoun[k])
 domainLoop(pronoun, adj, noun);
+
+//Obs:
+//just because our string will have the order pronoun+adj+noun doesn't mean this has to be the order of the nested loops.
+//they can be in any order we like, we just need to call it in the correct other, i.e., arrOfPronoun[j] + arrOfAdj[i] + arrOfNoun[k]
